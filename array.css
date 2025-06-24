@@ -1,0 +1,9 @@
+#arrayBox{
+    background-color: red;
+    display: flex;
+    height: 400px;
+}
+
+p{
+    color: purple;
+}
