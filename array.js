@@ -11,9 +11,7 @@ for (let i = 0; i < nums.length; i++){
 //Refactor the code to work with the DOM
 const displayNums = document.querySelector("#arrayBox")
 
-for (let i = 0; i < nums.length; i++){
-    displayNums.innerHTML += `<h1>${nums[i]}</h1>`
-}
+
 
 nums.forEach((item, index) => {
     //create html element for each array item
