@@ -8,6 +8,21 @@ for (let i = 0; i < nums.length; i++){
     console.log(nums[i]);
 }
 
+const arrayIndex = [0,1,2,3,4,5,6,7,8,9,10,11,12];
+
+const displayIndex = document.querySelector("#arrayIndex");
+
+arrayIndex.forEach((item, index) => {
+    const arrayIndexs = document.createElement("div");
+    arrayIndexs.textContent = item;
+    arrayIndexs.style.padding = "10px";
+    arrayIndexs.style.color = "blue";
+    arrayIndexs.style.margin = "2px";
+    arrayIndexs.style.border = "2px solid blue";
+
+    displayIndex.appendChild(arrayIndexs);
+});
+
 //Refactor the code to work with the DOM
 const displayNums = document.querySelector("#arrayBox")
 
