@@ -41,3 +41,40 @@ nums.forEach((item, index) => {
     //append arrayBorder to html container
     displayNums.appendChild(arrayBorder);
 });
+
+//add insert function with onclick button
+
+const insertButton = document.getElementById("insert");
+const inputDiv = document.getElementById("sideDiv");
+
+
+const newBox = document.createElement("div");
+const insertDiv = document.createElement("div");
+const numInsert = document.createElement("input");
+
+inputDiv.appendChild(newBox);
+newBox.appendChild(insertDiv);
+insertDiv.appendChild(numInsert);
+
+
+// Start hidden
+newBox.style.display = "none";
+
+insertButton.addEventListener("click", function(){
+
+if (newBox.style.display === "none"){
+    newBox.style.display = "flex";
+    numInsert.style.display = "flex";
+    insertDiv.style.display = "flex";
+    insertDiv.style.backgroundColor = "pink";
+}
+else{
+    newBox.style.display = "none";
+    numInsert.style.display = "none";
+    
+}
+    
+})
+
+
+
