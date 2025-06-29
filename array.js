@@ -44,7 +44,7 @@ const insertToggle = document.getElementById("insert");
 //most outer div
 const inputDiv = document.getElementById("sideDiv");
 
-//second outer div
+//outerDiv for the inputDiv
 const outsideDivForInsertToggle = document.createElement("div");
 
 
@@ -55,20 +55,20 @@ inputDiv.appendChild(outsideDivForInsertToggle);
 // Start hidden
 outsideDivForInsertToggle.style.display = "none";
 
-
+//toggle UI function for insert
 insertToggle.addEventListener("click", function(){
 
 if (outsideDivForInsertToggle.style.display === "none"){
     outsideDivForInsertToggle.style.display = "flex";
     inputDiv.style.display = "flex";
     numInput.style.display = "inline-block";
-    indexInput.style.display= "inline-block";
+    insertIndexInput.style.display= "inline-block";
 }
 else{
     inputDiv.style.display = "none";
     outsideDivForInsertToggle.style.display = "none";
     numInput.style.display = "none";
-    indexInput.style.display = "none";
+    insertIndexInput.style.display = "none";
     
 }
     
@@ -77,11 +77,11 @@ else{
 //input function
 let numbers = [];
 const numInput= document.getElementById("numInput");
-const indexInput = document.getElementById("indexInput");
+const insertIndexInput = document.getElementById("insertIndexInput");
 const addButton = document.getElementById("addBtn");
 
 addButton.addEventListener("click", function(){
-    const index = Number(indexInput.value);
+    const index = Number(insertIndexInput.value);
     const num = Number(numInput.value);
     if(index >= 0 && index <= nums.length && !isNaN(num)){
         nums.splice(index, 0, num);
@@ -89,20 +89,38 @@ addButton.addEventListener("click", function(){
     }
 
     numInput.value = "";
-    indexInput.value = "";
+    insertIndexInput.value = "";
 })
 
 //remove button for css/ui
 const removeToggle = document.getElementById("remove");
+//div around remove features
+const removeDiv = document.getElementById("removeDiv");
+//outer div for removeDiv
+const outsideDivForRemoveToggle = document.createElement("div");
+//append to removeDiv
+removeDiv.appendChild(outsideDivForRemoveToggle);
+//set the outer div for remove div to none style
+outsideDivForRemoveToggle.style.display = "none";
+
 
 removeToggle.addEventListener("click", function(){
-
-})
+    if(outsideDivForRemoveToggle.style.display === "none"){
+        outsideDivForRemoveToggle.style.display = "flex";
+        removeDiv.style.display = "flex";
+        removeIndexInput.style.display= "inline-block";
+    }
+    else{
+        outsideDivForRemoveToggle.style.display = "none";
+        removeDiv.style.display = "none";
+        removeIndexInput.style.display = "none";
+    }
+});
 
 //remove function
 const removeButton = document.getElementById("removeBtn");
 
 removeButton.addEventListener("click", function(){
-    const index = Number(indexInput.value);
+    const index = Number(removeIndexInput.value);
 
 })
