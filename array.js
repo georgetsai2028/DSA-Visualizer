@@ -59,12 +59,14 @@ insertButton.addEventListener("click", function(){
 
 if (newBox.style.display === "none"){
     newBox.style.display = "flex";
+    inputDiv.style.display = "flex";
     numInput.style.display = "inline-block";
     indexInput.style.display= "inline-block";
     insertDiv.style.display = "flex";
     insertDiv.style.backgroundColor = "pink";
 }
 else{
+    inputDiv.style.display = "none";
     newBox.style.display = "none";
     numInput.style.display = "none";
     indexInput.style.display = "none";
