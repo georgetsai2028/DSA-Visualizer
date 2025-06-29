@@ -75,6 +75,7 @@ else{
     
 })
 
+//input function
 let numbers = [];
 const numInput= document.getElementById("numInput");
 const indexInput = document.getElementById("indexInput");
@@ -91,3 +92,6 @@ addButton.addEventListener("click", function(){
     numInput.value = "";
     indexInput.value = "";
 })
+
+//remove function
+const removeButton = document.getElementById("removeBtn");
