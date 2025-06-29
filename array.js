@@ -40,7 +40,7 @@ nums.forEach((item, index) => {
 
 //add insert function with onclick button
 
-const insertButton = document.getElementById("insert");
+const insertToggle = document.getElementById("insert");
 const inputDiv = document.getElementById("sideDiv");
 
 
@@ -55,7 +55,7 @@ newBox.appendChild(insertDiv);
 // Start hidden
 newBox.style.display = "none";
 
-insertButton.addEventListener("click", function(){
+insertToggle.addEventListener("click", function(){
 
 if (newBox.style.display === "none"){
     newBox.style.display = "flex";
@@ -93,5 +93,17 @@ addButton.addEventListener("click", function(){
     indexInput.value = "";
 })
 
+//remove button for css/ui
+const removeToggle = document.getElementById("remove");
+
+removeToggle.addEventListener("click", function(){
+
+})
+
 //remove function
 const removeButton = document.getElementById("removeBtn");
+
+removeButton.addEventListener("click", function(){
+    const index = Number(indexInput.value);
+
+})
