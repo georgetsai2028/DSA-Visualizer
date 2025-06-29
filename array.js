@@ -46,10 +46,9 @@ const inputDiv = document.getElementById("sideDiv");
 
 //second outer div
 const outsideDivForInsertToggle = document.createElement("div");
-const insertDiv = document.createElement("div");
+
 
 inputDiv.appendChild(outsideDivForInsertToggle);
-outsideDivForInsertToggle.appendChild(insertDiv);
 
 
 
@@ -64,8 +63,6 @@ if (outsideDivForInsertToggle.style.display === "none"){
     inputDiv.style.display = "flex";
     numInput.style.display = "inline-block";
     indexInput.style.display= "inline-block";
-    insertDiv.style.display = "flex";
-    insertDiv.style.backgroundColor = "pink";
 }
 else{
     inputDiv.style.display = "none";
