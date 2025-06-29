@@ -41,24 +41,26 @@ nums.forEach((item, index) => {
 //add insert function with onclick button
 
 const insertToggle = document.getElementById("insert");
+//most outer div
 const inputDiv = document.getElementById("sideDiv");
 
-
-const newBox = document.createElement("div");
+//second outer div
+const outsideDivForInsertToggle = document.createElement("div");
 const insertDiv = document.createElement("div");
 
-inputDiv.appendChild(newBox);
-newBox.appendChild(insertDiv);
+inputDiv.appendChild(outsideDivForInsertToggle);
+outsideDivForInsertToggle.appendChild(insertDiv);
 
 
 
 // Start hidden
-newBox.style.display = "none";
+outsideDivForInsertToggle.style.display = "none";
+
 
 insertToggle.addEventListener("click", function(){
 
-if (newBox.style.display === "none"){
-    newBox.style.display = "flex";
+if (outsideDivForInsertToggle.style.display === "none"){
+    outsideDivForInsertToggle.style.display = "flex";
     inputDiv.style.display = "flex";
     numInput.style.display = "inline-block";
     indexInput.style.display= "inline-block";
@@ -67,7 +69,7 @@ if (newBox.style.display === "none"){
 }
 else{
     inputDiv.style.display = "none";
-    newBox.style.display = "none";
+    outsideDivForInsertToggle.style.display = "none";
     numInput.style.display = "none";
     indexInput.style.display = "none";
     
