@@ -122,5 +122,10 @@ const removeButton = document.getElementById("removeBtn");
 
 removeButton.addEventListener("click", function(){
     const index = Number(removeIndexInput.value);
+    if(index >= 0 && index <= nums.length){
+        nums.splice(index, 1);
+        renderNums();
+    }
+    removeIndexInput.value = "";
 
 })
